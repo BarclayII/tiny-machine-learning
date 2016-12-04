@@ -68,5 +68,6 @@ def step(dataset, model, grad, desc, count=None):
     agg = preds.treeReduce(_add_losses)
     loss = agg[0] / count
     grads = {c: agg[1][c] / count for c in agg[1]}
+    _model_broadcast.unpersist()
     desc(model, grads)
     return loss
