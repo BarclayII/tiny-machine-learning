@@ -1,4 +1,9 @@
+'''
+Original implementation
+https://github.com/clab/dynet_tutorial_examples/blob/master/tutorial_parser.ipynb
 
+The code structure and variable names are similar for better reference.
+'''
 import torch as T
 import torch.nn as NN
 import torch.nn.functional as F
